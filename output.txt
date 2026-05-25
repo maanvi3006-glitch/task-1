@@ -1,17 +1,40 @@
-SQL Execution Output Summary
+Sample Dataset Execution Output
 
-- Database: postgres
-- Host: localhost
-- Port: 5432
-- User: postgres
+Dataset loaded from: sample_dataset.sql
+Tables created:
+- attempts
+- student_activity
 
-Results:
-- table_name query: 0 rows
-- column_name query: 0 rows
+Query results:
+1. Average time to reach Level 50: 115.2 hours
+2. Levels with >40% fail rate:
+   - level 50: 57.14% (7 attempts)
+   - level 30: 50.00% (4 attempts)
+3. Top student streaks:
+   - student 6: 8 days
+   - student 8: 7 days
+   - student 9: 6 days
+4. Top 10 fastest successful completions (minutes):
+   - student 8 level 10: 10.0
+   - student 1 level 10: 12.0
+   - student 10 level 20: 20.0
+   - student 3 level 20: 20.0
+   - student 6 level 40: 25.0
+   - student 9 level 30: 30.0
+   - student 2 level 50: 30.0
+   - student 1 level 50: 35.0
+   - student 8 level 50: 40.0
+   - student 4 level 30: 55.0
+5. Overall pass rate by level:
+   - level 40: 100%
+   - level 10: 100%
+   - level 20: 66.67%
+   - level 30: 50.00%
+   - level 50: 42.86%
 
-Errors:
-- relation "attempts" does not exist
-- relation "student_activity" does not exist
-
-Next step:
-Replace the placeholder table names in queries.sql with your actual database tables and schema, then rerun the script.
+CSV outputs written to:
+- results/q1.csv
+- results/q2.csv
+- results/q3.csv
+- results/q4.csv
+- results/q5.csv

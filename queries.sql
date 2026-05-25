@@ -10,10 +10,10 @@ WHERE table_schema = 'public';
 --------------------------------------------------
 
 -- STEP 8: Inspect the columns for a specific table
--- Replace 'your_table_name' with the actual table name.
+-- Sample dataset owns the 'attempts' table. Replace if needed.
 SELECT column_name, data_type
 FROM information_schema.columns
-WHERE table_name = 'your_table_name';
+WHERE table_name = 'attempts';
 
 --------------------------------------------------
 
@@ -81,48 +81,3 @@ SELECT level_id,
 FROM attempts
 GROUP BY level_id
 ORDER BY pass_rate_percent DESC;
- table_name
-------------
-(0 rows)
-
- column_name | data_type
--------------+-----------
-(0 rows)
-
-psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:35: ERROR:  relation "attempts" does not exist
-LINE 4:     FROM attempts
-                 ^
-psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:46: ERROR:  relation "attempts" does not exist
-LINE 4: FROM attempts
-             ^
-psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:61: ERROR:  relation "student_activity" does not exist
-LINE 4:     FROM student_activity
-                 ^
-psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:73: ERROR:  relation "attempts" does not exist
-LINE 4: FROM attempts
-             ^
-psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:83: ERROR:  relation "attempts" does not exist
-LINE 4: FROM attempts
-             ^             table_name
-            ------------
-            (0 rows)
-            
-             column_name | data_type
-            -------------+-----------
-            (0 rows)
-            
-            psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:35: ERROR:  relation "attempts" does not exist
-            LINE 4:     FROM attempts
-                             ^
-            psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:46: ERROR:  relation "attempts" does not exist
-            LINE 4: FROM attempts
-                         ^
-            psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:61: ERROR:  relation "student_activity" does not exist
-            LINE 4:     FROM student_activity
-                             ^
-            psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:73: ERROR:  relation "attempts" does not exist
-            LINE 4: FROM attempts
-                         ^
-            psql:c:/Users/maanv/OneDrive/Desktop/task 1/queries.sql:83: ERROR:  relation "attempts" does not exist
-            LINE 4: FROM attempts
-                         ^
